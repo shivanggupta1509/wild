@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Wildlife Harmony Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0A3625;
+            color: #F4F8EC;
+            text-align: center;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        nav, .logo, .hamburger, .nav-links, .nav-links.active, .nav-links a, .nav-links a:hover, .close-menu {
+            /* Same navbar styles as main page */
+        }
+        .hero {
+            position: relative;
+            height: 250px;
+            background: #0A3625;
+            overflow: hidden;
+        }
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .hero h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            z-index: 1;
+        }
+        .blog-container {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .blog-post {
+            background: #144c4b;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .blog-post:hover {
+            transform: scale(1.05);
+        }
+        .blog-post h2 {
+            font-size: 1.8rem;
+            margin: 0 0 10px;
+        }
+        .blog-post p {
+            font-size: 1.1rem;
+            margin: 0 0 15px;
+        }
+        .blog-post a {
+            color: #F4F8EC;
+            text-decoration: none;
+            font-weight: bold;
+            background: #0A3726;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .blog-post a:hover {
+            background: #F4F8EC;
+            color: #0A3726;
+        }
+        footer {
+            background: #144c4b;
+            color: #F4F8EC;
+            padding: 20px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Wildlife Harmony</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="menu">
+            <span class="close-menu" onclick="toggleMenu()">×</span>
+            <a href="index.html#about">About</a>
+            <a href="index.html#mission">Mission</a>
+            <a href="index.html#volunteer">Join Us</a>
+            <a href="index.html#donate">Donate</a>
+            <a href="blog.html">Blog</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 320" preserveAspectRatio="none">
+            <path fill="#A8D5BA" fill-opacity="1" d="M0,160C100,120,200,120,300,160C400,200,500,200,600,160C700,120,800,120,900,160C1000,200,1100,200,1200,160C1300,120,1400,120,1500,160C1600,200,1700,200,1800,160C1900,120,2000,120,2000,160V0H0V0Z"></path>
+        </svg>
+        <h1>Our Blog</h1>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="blog-container">
+        <div class="blog-post">
+            <h2>Relocating Wildlife: A New Beginning</h2>
+            <p>By Shivang, Managing Director | April 01, 2025</p>
+            <p>A brief look into our latest relocation efforts...</p>
+            <a href="blog1.html">Read More</a>
+        </div>
+        <div class="blog-post">
+            <h2>Educating Communities for Coexistence</h2>
+            <p>By Abhinandan, Creative Director | April 01, 2025</p>
+            <p>How we’re teaching harmony with nature...</p>
+            <a href="blog2.html">Read More</a>
+        </div>
+        <div class="blog-post">
+            <h2>The Rescue Diaries</h2>
+            <p>By Krish, Operations Director | April 01, 2025</p>
+            <p>Behind the scenes of our rescue missions...</p>
+            <a href="blog3.html">Read More</a>
+        </div>
+        <div class="blog-post">
+            <h2>Advocating for Sustainability</h2>
+            <p>By Sanskar, Advocacy Director | April 01, 2025</p>
+            <p>Our push for greener policies...</p>
+            <a href="blog4.html">Read More</a>
+        </div>
+        <div class="blog-post">
+            <h2>Restoring Habitats, Step by Step</h2>
+            <p>By Darsh, Outreach Director | April 01, 2025</p>
+            <p>Progress in habitat restoration...</p>
+            <a href="blog5.html">Read More</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Wildlife Harmony Foundation | Protecting Nature Together.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('menu');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
