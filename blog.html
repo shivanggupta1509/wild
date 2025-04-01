@@ -16,8 +16,67 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
-        nav, .logo, .hamburger, .nav-links, .nav-links.active, .nav-links a, .nav-links a:hover, .close-menu {
-            /* Same navbar styles as main page */
+        nav {
+            background: #144c4b;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            color: #F4F8EC;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: #F4F8EC;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 55, 38, 0.95);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .nav-links.active {
+            display: flex;
+            animation: fadeInMenu 0.5s ease-in-out;
+        }
+        .nav-links a {
+            color: #F4F8EC;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .nav-links a:hover {
+            transform: scale(1.1);
+        }
+        .close-menu {
+            font-size: 2rem;
+            color: #F4F8EC;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            cursor: pointer;
+        }
+        @keyframes fadeInMenu {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .hero {
             position: relative;
@@ -40,6 +99,7 @@
             transform: translate(-50%, -50%);
             font-size: 3rem;
             z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .blog-container {
             padding: 50px 20px;
